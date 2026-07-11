@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Bharti ❤️</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<!-- LOCK SCREEN -->
+<div class="container" id="lockScreen">
+
+  <div class="lock-card">
+
+    <div class="profile-box">
+      <img src="assets/profile.jpg" id="profile" alt="Profile">
+    </div>
+
+    <h1>LOCKED</h1>
+
+    <p class="hint">
+      Hint - Click on picture to know passkey!
+    </p>
+
+    <div class="pin-display">
+      <div class="dot" id="d1"></div>
+      <div class="dot" id="d2"></div>
+      <div class="dot" id="d3"></div>
+      <div class="dot" id="d4"></div>
+    </div>
+
+    <div class="keypad">
+
+      <button onclick="press(1)">1</button>
+      <button onclick="press(2)">2</button>
+      <button onclick="press(3)">3</button>
+
+      <button onclick="press(4)">4</button>
+      <button onclick="press(5)">5</button>
+      <button onclick="press(6)">6</button>
+
+      <button onclick="press(7)">7</button>
+      <button onclick="press(8)">8</button>
+      <button onclick="press(9)">9</button>
+
+      <button onclick="erase()">⌫</button>
+      <button onclick="press(0)">0</button>
+      <button onclick="unlock()">❤</button>
+
+    </div>
+
+    <p id="error"></p>
+
+  </div>
+
+</div>
+
+<!-- LOADING SCREEN -->
+
+<section id="loadingScreen" class="hidden">
+
+  <div class="loader-box">
+
+    <div class="heart-loader"></div>
+
+    <h2>Loading Your Surprise...</h2>
+
+    <div class="loading-bar">
+      <div id="loadingProgress"></div>
+    </div>
+
+    <p id="loadingText">Please Wait ❤️</p>
+
+  </div>
+
+</section>
+
+<!-- WELCOME SCREEN -->
+
+<section id="welcomeScreen" class="hidden">
+
+  <h1>Happy Birthday Bharti ❤️</h1>
+
+  <p>Today is all about you ✨</p>
+
+  <button id="startBtn">
+    Begin Journey
+  </button>
+
+</section>
+
+<audio id="music" loop>
+  <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
