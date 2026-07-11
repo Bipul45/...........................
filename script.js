@@ -63,7 +63,9 @@ function unlock() {
 
             document.getElementById("lockScreen").style.display = "none";
 
-            document.getElementById("loadingScreen").classList.add("show");
+            const loading = document.getElementById("loadingScreen");
+            loading.classList.remove("hidden");
+            loading.classList.add("show");
 
             startLoading();
 
@@ -110,9 +112,14 @@ function startLoading() {
             clearInterval(timer);
             console.log("Loding Complete");
 
-            document.getElementById("loadingScreen").classList.remove("show");
+            const loading = document.getElementById("loadingScreen");
+            const welcome = document.getElementById("welcomeScreen");
 
-            document.getElementById("welcomeScreen").classList.add("show");
+            loading.classList.remove("show");
+            loading.classList.add("hidden");
+
+            welcome.classList.remove("hidden");
+            welcome.classList.add("show");
 
         }
 
