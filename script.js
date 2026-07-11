@@ -128,18 +128,44 @@ function startLoading() {
 }
 
 // Welcome Button
-document.addEventListener("DOMContentLoaded", () => {
+    // ===== AGE COUNTER =====
 
-    const btn = document.getElementById("startBtn");
+function updateAge() {
 
-    if (btn) {
+    const birth = new Date("2008-08-14");
+    const today = new Date();
 
-        btn.addEventListener("click", () => {
+    let years = today.getFullYear() - birth.getFullYear();
+    let months = today.getMonth() - birth.getMonth();
+    let days = today.getDate() - birth.getDate();
 
-            alert("🎉 Next Part me Age Counter aur Gallery open hogi ❤️");
-
-        });
-
+    if (days < 0) {
+        months--;
+        const lastMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+        days += lastMonth.getDate();
     }
+
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    document.getElementById("years").innerText = years;
+    document.getElementById("months").innerText = months;
+    document.getElementById("days").innerText = days;
+}
+
+document.getElementById("startBtn").addEventListener("click", () => {
+
+    document.getElementById("welcomeScreen").classList.remove("show");
+    document.getElementById("ageScreen").classList.add("show");
+
+    updateAge();
+
+});
+
+document.getElementById("galleryBtn").addEventListener("click", () => {
+
+    alert("📸 Next Part me Photo Gallery open hogi ❤️");
 
 });
