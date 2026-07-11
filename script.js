@@ -94,7 +94,7 @@ function unlock() {
 
 // Loading Animation
 function startLoading() {
-
+    console.log("Loding Started");
     let progress = 0;
 
     const bar = document.getElementById("loadingProgress");
@@ -108,6 +108,7 @@ function startLoading() {
         if (progress >= 100) {
 
             clearInterval(timer);
+            console.log("Loding Complete");
 
             document.getElementById("loadingScreen").classList.remove("show");
 
