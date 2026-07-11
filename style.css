@@ -145,6 +145,11 @@ z-index:999;
 display:none;
 }
 
+#loadingScreen.show,
+#welcomeScreen.show{
+  display:flex:
+}
+
 .loader-box{
 width:320px;
 text-align:center;
