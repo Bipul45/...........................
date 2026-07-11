@@ -147,7 +147,7 @@ display:none;
 
 #loadingScreen.show,
 #welcomeScreen.show{
-  display:flex:
+  display:flex;
 }
 
 .loader-box{
