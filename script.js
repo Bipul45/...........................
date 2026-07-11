@@ -63,7 +63,7 @@ function unlock() {
 
             document.getElementById("lockScreen").style.display = "none";
 
-            document.getElementById("loadingScreen").classList.remove("hidden");
+            document.getElementById("loadingScreen").classList.add("show");
 
             startLoading();
 
@@ -109,9 +109,9 @@ function startLoading() {
 
             clearInterval(timer);
 
-            document.getElementById("loadingScreen").classList.add("hidden");
+            document.getElementById("loadingScreen").classList.remove("show");
 
-            document.getElementById("welcomeScreen").classList.remove("hidden");
+            document.getElementById("welcomeScreen").classList.add("show");
 
         }
 
